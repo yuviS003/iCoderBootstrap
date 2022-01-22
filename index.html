@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>iCoder - Heaven for programmers</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">iCoder</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Topics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Web3</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Backend Technologies</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Support us!!!</a>
+                  <a class="dropdown-item" href="#">Write with us!!!</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <div class="mx-2">
+            <button class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button><button class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember my info</label>
+              </div>
+              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Sign-Up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember my info</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Sing-up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel slide carousel-fade"
+      id="carouselExampleCaptions"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://source.unsplash.com/1400x500/?blockchain"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>
+              Discover the best technology in the world at the most affordable
+              price!!
+            </h2>
+            <p>
+              We provide access to the best tech looming around in the world at
+              the best prices.
+            </p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Hackathons</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://source.unsplash.com/1400x500/?technology"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Get the best results!</h2>
+            <p>
+              We work with the best coders who give your the best results not
+              just in time, but also everytime.
+            </p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Hackathons</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://source.unsplash.com/1400x500/?corporate"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>You come first!!</h2>
+            <p>You and your expectations come first since we exist for you!!</p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Hackathons</button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">Why Big Tech Companies Have Been Quiet on Texas’ Abortion Law</h3>
+              <div class="mb-1 text-muted">Jan 22</div>
+              <p class="card-text mb-auto">
+                IN 2015, AS multiple states enacted laws permitting discrimination against gays and lesbians, Apple CEO Tim Cook took to The Washington Post to decry the trend. “Discrimination, in all its forms, is bad for business,” he proclaimed. Salesforce canceled its events in Indiana after the state passed its religious freedom law 
+              </p>
+              <a href="https://www.wired.com/story/why-big-tech-quiet-texas-abortion-law/" class="stretched-link" target="_blank">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/200x250/?texas" alt="" class="bd-placeholder-img"
+              width="200"
+              height="250">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">DESIGN THINKING FOR ENTERPRISE ARCHITECTS – A CONVERSATION WITH MAYANK SAXENA</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                The concept of Design Thinking is all the rage these days in certain circles—particularly in MBA programs and in the tech industry. But what is Design Thinking and why should businesses make it a consideration? And what does it have to do with Enterprise Architecture?
+              </p>
+              <a href="https://blog.opengroup.org/2018/10/25/design-thinking-for-enterprise-architects-a-conversation-with-mayank-saxena/" class="stretched-link" target="_blank">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/200x250/?nft" alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+              </img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">NFTs</strong>
+              <h3 class="mb-0">What interactions exist between NFTs and DeFi?</h3>
+              <div class="mb-1 text-muted">Jan 18</div>
+              <p class="card-text mb-auto">
+                Decentralized finance has been around for many years on Ethereum but really exploded during 2020. Very quickly, certain NFT mechanisms were included to make their projects more complete, let's take a look at some use cases! 
+              </p>
+              <a href="https://nonfungible.com/blog/what-interactions-exist-between-nfts-and-defi" class="stretched-link" target="_blank">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/200x250/?NFTs" alt="" class="bd-placeholder-img"
+              width="200"
+              height="250">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Meta</strong>
+              <h3 class="mb-0">A Marketer’s Guide to the Metaverse</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                Technology is ever-changing and, because of that, so is marketing. The evolution of the metaverse is just one recent development in the world of technology, but one that will have a huge impact on the human experience as we know it.
+              </p>
+              <a href="https://neilpatel.com/blog/metaverse/" class="stretched-link" target="_blank">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/200x250/?nft" alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+              </img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Blockchain</strong>
+              <h3 class="mb-0">IBM Supply Chain and Blockchain</h3>
+              <div class="mb-1 text-muted">Jan 22</div>
+              <p class="card-text mb-auto">
+                Companies are under mounting pressure from regulators, investors, and consumers to progress toward more sustainable and socially responsible business operations — and to demonstrate these measures in a robust and verifiable way. 
+              </p>
+              <a href="https://www.ibm.com/blogs/blockchain/2022/01/harnessing-the-power-of-data-and-ai-to-operationalize-sustainability/" class="stretched-link" target="_blank">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/200x250/?ibm" alt="" class="bd-placeholder-img"
+              width="200"
+              height="250">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">EVs</strong>
+              <h3 class="mb-0">Electric Vehicles Charging up for a Better Future</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                As vehicle use continues to increase, many countries around the world are focusing on ways to decrease pollution, greenhouse gas emissions and dependence on oil. Promoting less polluting non-oil based propulsion systems is an effective way to address these issues. Of all emerging the road transportation technologies that use fuels other than carbon based fuels, Plugin Electric Vehicles (PEV) are the ones closest to mainstream. India, with its high dependence on oil imports and having cities with some of the highest air pollution levels in the world, can benefit with large scale adoption of PEVs on this roads as the technology matures. - Girish Shirodkar and Shantanu Gautam
+              </p>
+              <a href="#" class="stretched-link" target="_blank">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/200x250/?electricak vehicles" alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              >
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
+              </img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
